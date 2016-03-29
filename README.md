@@ -1,1 +1,1 @@
-# InstaHireApp# inst
+# InstantHireApp# inst
