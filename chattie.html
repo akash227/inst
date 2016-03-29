@@ -1,0 +1,25 @@
+<div  id = "wrapper"  class="container" ng-click = "clicked($event)" ng-controller="Login">
+		<div ng-show = "show" class="fixed-action-btn " style="bottom: 90px; right: 24px;">
+			<a id = "delete" class="waves-effect waves-light btn-floating btn-large tooltipped  amber accent-3" data-position="left" data-delay="50" data-tooltip="Write Message" ng-click = "toggleSendMsg()">
+				<i id = "msgSenderStartIcon" class="large material-icons">mode_edit</i>        
+			</a>
+		</div>
+
+		<div id = "list" ng-show="show" style = "display:block;" >
+			<div class="row"  ng-repeat="message in messages" >
+				<div class="lighten-2 card-panel hoverable waves-effect waves-light" ng-class="{blue:message.sentBy == me,right:message.sentBy == me,left:message.sentBy == guest, pink:message.sentBy == guest}" id = "msgItem-{{$index}}"> {{message.message}}</div>
+			</div>
+		</div>
+		<div ng-show="showSend">
+			<form name = "sendMsgForm">
+				<div class="row-fluid well msg center" id = "msgSender">
+					<div class="input-field" id = "msgSenderTF">
+						<i class="material-icons prefix" id = "msgSenderI">mode_edit</i>
+						<input type="text" id = "msgSenderTA" name="msgTA" ng-keyup="$event.keyCode == 13 && sendMsg()" class="waves-effect waves-light " ng-model="txt">
+						<label for="msgSenderTA">Type anythin . . .</label>	
+						<input id = "msgSenderB" type="button" ng-click="sendMsg()" class="center btn btn-material-indigo btn-raised waves-effect waves-light" value = "Send it!">
+					</div>
+				</div>
+			</form>
+		</div>
+	</div>

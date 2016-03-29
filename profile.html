@@ -1,0 +1,76 @@
+<div class="fixed-action-btn " style="bottom: 90px; right: 24px;">
+    <a id = "chat" ui-sref = "chat" class="waves-effect waves-light btn-floating btn-large tooltipped  red" data-position="left" data-delay="50" data-tooltip="Chat!" >
+      <i id = "msgSenderStartIcon" class="large material-icons">mode_edit</i>        
+    </a>
+  </div>
+<ul class="collection" ng-model="user">
+    <li class="collection-item avatar">
+      <i class="material-icons circle">perm_identity</i>
+      <span class="title" style="font-size: 17px;">Name</span><br><br>
+      <p style="font-size: 20px;">{{user.profile.name}}</p>    
+    </li>
+    <li class="collection-item avatar">
+      <i class="material-icons circle">email</i>
+      <span class="title" style="font-size: 17px;">Email</span><br><br>
+      <p style="font-size: 20px;">{{user.profile.email}}</p> 
+    </li>
+    <li class="collection-item avatar">
+      <i class="material-icons circle green">phone</i>
+      <span class="title" style="font-size: 17px;">Phone</span><br><br>
+      <p style="font-size: 20px;">{{user.profile.mobile}}</p> 
+    </li>
+    <li class="collection-item avatar">
+      <i class="material-icons circle red">business</i>
+      <span class="title" style="font-size: 17px;">Address</span><br><br>
+      <p style="font-size: 20px;">{{user.profile.address + ',' + user.profile.city}}
+      </p>
+    </li>
+    <li class="collection-item avatar">
+      <i class="material-icons circle red">reorder</i>
+      <span class="title" style="font-size: 17px;">Category</span><br><br>
+      <p style="font-size: 20px;">{{user.profile.category}}
+      </p>
+    </li>
+    <li class="collection-item avatar">
+      <i class="material-icons circle red">library_books</i>
+      <span class="title" style="font-size: 17px;">Education</span><br><br>
+      <p style="font-size: 20px;">{{user.profile.edu}}
+      </p>
+    </li>
+    <li class="collection-item avatar">
+      <i class="material-icons circle red">schedule</i>
+      <span class="title" style="font-size: 17px;">Experience</span><br><br>
+      <p style="font-size: 20px;">{{user.profile.exp}}
+      </p>
+    </li>
+    <li class="collection-item avatar">
+      <i class="material-icons circle red">assessment</i>
+      <span class="title" style="font-size: 17px;">Skill</span><br><br>
+      <p style="font-size: 20px;">{{user.profile.skill}}
+      </p>
+    </li>
+    <li class="collection-item avatar">
+      <i class="material-icons circle red">web</i>
+      <span class="title" style="font-size: 17px;">Linkedin Url</span><br><br>
+      <p style="font-size: 20px;">{{user.profile.linkedin}}
+      </p>
+    </li>
+    <li class="collection-item avatar">
+      <i class="material-icons circle red">web</i>
+      <span class="title" style="font-size: 17px;">Github Url</span><br><br>
+      <p style="font-size: 20px;">{{user.profile.github}}
+      </p>
+    </li>
+    <li class="collection-item avatar">
+      <i class="material-icons circle red">subject</i>
+      <span class="title" style="font-size: 17px;">Projects</span><br><br>
+      <p style="font-size: 20px;">{{user.profile.projects}}
+      </p>
+    </li>
+    <li class="collection-item avatar">
+      <i class="material-icons circle red">perm_contact_calendar</i>
+      <span class="title" style="font-size: 17px;">About</span><br><br>
+      <p style="font-size: 20px;">{{user.profile.about}}
+      </p>
+    </li>
+  </ul>

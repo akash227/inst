@@ -1,0 +1,65 @@
+<div style="padding-top:70px;" >
+ <ul class="collapsible popout" data-collapsible="accordion" >
+     <li ng-repeat = "req in requirements" ng-show = "reqFilter(req.worker)">
+       <div class="collapsible-header">
+       		{{req.req}}
+       </div>
+       <div class="collapsible-body white" style="padding-top:10px; padding-bottom:10px;">
+        <ul class="collection" ng-model="user">
+          <li class="collection-item avatar">
+            <i class="material-icons circle">reorder</i>
+            <span class="title" style="font-size: 17px;">Category</span><br><br>
+            <p style="font-size: 20px;">{{req.category}}</p>    
+          </li>
+          <li class="collection-item avatar">
+            <i class="material-icons circle">perm_identity</i>
+            <span class="title" style="font-size: 17px;">Bidding Date</span><br><br>
+            <p style="font-size: 20px;">{{req.bidDate}}</p>    
+          </li>
+          <li class="collection-item avatar">
+            <i class="material-icons circle">perm_identity</i>
+            <span class="title" style="font-size: 17px;">Submission Date</span><br><br>
+            <p style="font-size: 20px;">{{req.submDate}}</p>    
+          </li>
+          <li class="collection-item avatar">
+            <i class="material-icons circle">assessment</i>
+            <span class="title" style="font-size: 17px;">Description</span><br><br>
+            <p style="font-size: 20px;">{{req.desc}}</p>    
+          </li>
+          <li class="collection-item avatar">
+            <i class="material-icons circle">library_books</i>
+            <span class="title" style="font-size: 17px;">Budget</span><br><br>
+            <p style="font-size: 20px;">{{req.budget}}</p>    
+          </li>
+          <li class="collection-item avatar" ng-show = "bidd">
+            <i class="material-icons circle">library_books</i>
+            <h4> Bidding </h4>
+            <ul ng-repeat = "bid in req.bidding">
+              <li style = "padding:10px"><h5>Bid Amt : {{bid.bidAmt}} by {{bid.bidBy}}
+               <a class="waves-effect waves-light btn blue right" ng-click="acceptBid(req._id, bid.bidByID)">Accept</a></h5>
+               </li>
+            </ul>
+          </li>
+        </ul>
+
+        
+       		<div class="white" style="text-align:center">
+   				<a class="waves-effect waves-light btn blue" ng-show = "check()" ng-click="modal($index)">BID</a>
+          <a class="waves-effect waves-light btn teal right" ng-show = "check()" ng-click="chat($index)">Chat</a>
+  			  </div>
+       </div>
+     </li>
+
+   </ul>
+ </div>
+
+
+ <div id="modal1" class="modal bottom-sheet">
+    <div class="modal-content" style="padding:10px;">
+      		<label for="bidamt">Enter your bid amount</label>
+			<input type="text" id="bidamt" ng-model="bidAmt" placeholder="Enter the bidding amount" class="validate">
+ 	</div>
+    <div class="modal-footer">
+      <a class=" modal-action modal-close center waves-light btn blue" ng-click = "placeBid()">DONE</a>
+    </div>
+  </div>

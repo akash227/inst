@@ -1,0 +1,189 @@
+    /* CSS declarations go here */
+body{
+	background: #1796E3; /* For browsers that do not support gradients */
+    background: -webkit-linear-gradient(#1796E3, #017BC5); /* For Safari 5.1 to 6.0 */
+    background: -o-linear-gradient(#1796E3, #017BC5); /* For Opera 11.1 to 12.0 */
+    background: -moz-linear-gradient(#1796E3, #017BC5); /* For Firefox 3.6 to 15 */
+    background: linear-gradient(#1796E3, #017BC5); /* Standard syntax */
+    height: 100%;
+    margin: 0;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}   
+  #indexCss {
+    display: -webkit-flex;
+    display: flex;
+    flex-direction: column; 
+    max-width:100%;
+    max-height:100%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 20px;   
+    margin-bottom: 20px;
+}      
+
+.collapsible-header{
+    background-color: #EA3556;
+    color:white;
+}
+.collapsible-body{
+    color:black;
+}
+#side-navbar, .nav-wrapper{
+    background-color: #62336D!important;
+}
+#side-navbar a{
+    color:white;
+}
+#sidenav-overlay{
+    background-color: transparent;
+}
+#nprogress .bar {
+    height: 7px;
+}
+#nprogress .spinner-icon {
+    height: 50px;
+    width: 50px;
+    border: solid 5px transparent;
+    border-top-color: #29d;
+    border-left-color: #29d;
+    }
+.modal-content{
+    margin: 0 auto;
+    text-align: center;
+    width: 100%;
+    height: 100%;
+}
+.hw{
+    width: 150px!important;
+    height: 150px!important;
+    margin: 10px!important;
+}
+#msgSender{
+    background-color: white!important;
+}
+#msgSender .input-field input[type=text] label {
+    padding-top: 10px;
+    color: black;
+    }
+.row .col{    
+    margin: 0 auto;
+    text-align: center;
+    width: 100%;
+    height: 100%;
+}
+.hw h4{
+    position: relative;
+    top:40%;
+    font-size: 2em;
+    text-transform: none;  
+}
+p{
+    position: relative;
+    top:40%;
+    font-size: 2em;
+    text-transform: none;
+}
+.postB{
+    width: 300px!important;
+    height: 300px!important;
+    margin: 10px!important;
+}
+.row{
+    padding-bottom: 10px;
+}
+
+
+#signupTabs{
+    padding-top: 20px;
+}
+.input-field input[type=text] label :not('#search') {
+     color: #F4D363;
+}
+
+select,option{
+    color:black;
+}
+.input-field input[type=text]:focus + label :not('#search'), .input-field input[type=password]:focus + label, .input-field input[type=email]:focus + label, .input-field input[type=number]:focus + label{
+ color: #F4D363;
+}
+.input-field input[type=text]:focus :not('#search'), .input-field input[type=password]:focus, .input-field input[type=email]:focus, .input-field input[type=number]:focus{
+     border-bottom: 1px solid #F4D363;
+     box-shadow: 0 1px 0 0 #F4D363;
+}
+#search label {
+    color:black!important;
+}
+#search label: focus + label {
+    color:black!important;
+}
+
+#search label: focus {
+    border-bottom: 1px solid black;
+     box-shadow: 0 1px 0 0 black;
+}
+.angular-google-map-container {
+    height: 80vh;    
+    /* display: inline; */
+}
+.search{
+    height: 80vh;
+    
+}
+.well{
+	background: #F5518E;
+	width:50%;
+	height: 20%;
+	margin-left: auto;
+	margin-right: auto;
+}
+#loginSignup{
+
+	margin-left: auto;
+	margin-right: auto;	
+}
+.center{
+    text-align: center;
+}
+#bottom{
+    position: relative;
+    bottom: 0px;
+}
+#list{
+    height: 100px;
+}
+#guest{
+    float:left;
+}
+#user{
+    float:right;
+}
+
+.show-hide {
+  -webkit-transition:all linear 1s;
+  transition:all linear 1s;
+}
+
+.show-hide.ng-hide {
+  opacity:0;
+
+}
+.show-hide.ng-show {
+  opacity:100;
+
+}
+.msg{
+    opacity: 0.5!important;
+    position: fixed;
+    left: 30vw;
+    width: 40vw;
+    bottom: 50px;
+    z-index: 10000;
+    padding: 0px!important;
+    padding-right: 20px!important;
+}
+.card-panel {
+    margin: 0;
+}
+
+

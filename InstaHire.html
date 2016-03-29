@@ -1,0 +1,34 @@
+<head>
+  <title>InstaHire</title>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <base href="/">
+</head>
+<body ng-app = "InstaHire" ng-controller = "IndexCtrl">
+	<div class="navbar-fixed">
+		<nav>
+	    <div class="nav-wrapper">
+	      <a href="#" ng-click = "goHome()" class="brand-logo center">InstaHire</a>
+	      <a href="#" data-activates="side-navbar" class="button-collapse"><i class="material-icons">menu</i></a>
+	      <ul class="right hide-on-med-and-down">
+	        <li ng-show = "check()"><a class = "btn-large pink" ui-sref="post">Post</a></li>
+	        <li ng-show = "check()"><a ui-sref="map">Map</a></li>
+	        <li><a ng-show = "checkLogIn()" ui-sref="reqfeed">Requirements Feed</a></li>
+	        <li><a href="#" ng-show = "checkLogIn()" ng-click = "logout()">Logout</a></li>
+	      </ul>
+	      <ul class="side-nav" id="side-navbar">
+	        <li ng-show = "check()"><a class = "btn-large pink" ui-sref="post">Post</a></li>
+	        <li ng-show = "check()"><a ui-sref="map">Map</a></li>
+	        <li><a ng-show = "checkLogIn()" ui-sref="reqfeed">Requirements Feed</a></li>
+	        <li><a ng-show = "checkLogIn()" href="#" ng-click = "logout()" >Logout</a></li>
+	      </ul>
+	    </div>
+	  </nav>
+	</div>
+  <div class="container" id="wrapper">
+    <div ui-view id="ui-view">
+      <div index ></div>
+    </div>
+  </div>
+    
+</body>
+

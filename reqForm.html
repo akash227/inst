@@ -1,0 +1,50 @@
+<div ng-model="domain" style="padding-top:70px;">
+<ul class="collapsible " data-collapsible="expandable">
+    <li ng-show="category != 'InstaHelpers' ">
+      <div class="collapsible-header"><i class="material-icons">view_headline</i>Requirement</div>
+      <div class="collapsible-body white" style="padding:10px;" >
+			<select class="browser-default" ng-model = "reqValue" ng-options= "domain for domain in domains" >
+				<option value="" disabled selected>Choose your option</option>
+			</select>
+      	</div>
+    </li>
+    <li ng-show="category == 'InstaHelpers' ">
+      <div class="collapsible-header"><i class="material-icons">view_headline</i>Requirements</div>
+      <div class="collapsible-body white" style="padding:10px;" >
+        <div class="input-field col s12">
+          <input id="domn" ng-model = "reqValue" type="text" class="validate" required>
+          <label for="domn">Enter the requirement</label>
+        </div>
+      </div>
+    </li>
+
+    <li>
+      <div class="collapsible-header"><i class="material-icons">schedule</i>Deadlines</div>
+      <div class="collapsible-body white" style="padding:10px;" >
+      		<label for="submission">Submission Deadline</label>
+      		<input id="submission" type="date" class="datepicker" >
+      		<label for="bidding">Bidding Deadline</label>
+      		<input id="bidding" type="date" class="datepicker" >
+      </div>
+    </li>
+    <li>
+      <div class="collapsible-header"><i class="material-icons">note_add</i>Description</div>
+      <div class="collapsible-body white" style="padding:10px;" >
+        <div class="input-field col s12">
+          <label for="budget">Enter the average budget</label>
+          <input ng-model="budget"  id="budget" type="text" class="validate">
+        </div>
+        <div class="input-field col s12">
+          <input ng-model="projectDesc"  id="projectdesc" type="text" class="validate">
+          <label for="projectdesc">Enter the description</label>
+        </div>
+      </div>
+    </li>
+    <li style="background-color:white; text-align:center; padding-top:40px; padding-bottom:40px;">
+        
+    	<button ng-click="submit()" class="btn waves-effect waves-light pink" type="submit" name="action">Submit Requirement
+    <i class="material-icons right">send</i>
+  </button>
+    </li>
+  </ul>
+</div>
